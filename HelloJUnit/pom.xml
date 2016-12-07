@@ -3,7 +3,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.example</groupId>
 	<artifactId>HelloJUnit</artifactId>
-	<packaging>jar</packaging>
 	<name>JenkinsDemo</name>
 	<version>0.0.1-SNAPSHOT</version>
 	<url>http://maven.apache.org</url>
@@ -11,7 +10,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
