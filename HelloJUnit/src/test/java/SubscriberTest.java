@@ -12,7 +12,7 @@ public class SubscriberTest {
 		// ACT
 		boolean result = subscriber.deleteSubscriber(msisdn);		
 		// Assert
-		assertEquals(false, result);
+		assertEquals(true, result);
 	}
 
 	@Test
