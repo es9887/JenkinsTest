@@ -1,9 +1,12 @@
 package test;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
+
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 public class ProjectATest {
 	@InjectMocks
@@ -12,20 +15,13 @@ public class ProjectATest {
 	@Mock
 	ProjectB crm = new ProjectB();
 
-//	@Test
-//	public void getBalanceByMsisdn_external_fail() {
-//		// Arrange
-//		String msisdn = "0944444444";
-//		// ACT
-//		Output result = selfcare.getBalanceByMsisdn(msisdn);
-//		// Assert
-//		assertEquals(100, result.getBalance());
-//	}
-
 	@Test
 	public void getBalanceByMsisdn_regular_balance_overpaid() {
 		// Arrange
 		String msisdn = "0911111111";
+		// mockito
+		MockitoAnnotations.initMocks(this);
+		when(crm.getBalanceByMsisdn(msisdn)).thenReturn(new Output(true, 100, "", ""));
 		// ACT
 		Output result = selfcare.getBalanceByMsisdn(msisdn);
 		// Assert
@@ -90,5 +86,15 @@ public class ProjectATest {
 		Output result = selfcare.getBalanceByMsisdn(msisdn);
 		// Assert
 		assertEquals("003", result.getErrorCode());
+	}
+
+	@Test
+	public void getBalanceByMsisdn_irregular_external_fail() {
+		// Arrange
+		String msisdn = "0944444444";
+		// ACT
+		Output result = selfcare.getBalanceByMsisdn(msisdn);
+		// Assert
+		assertEquals("004", result.getErrorCode());
 	}
 }

@@ -1,10 +1,20 @@
 package test;
+
+
 public class ProjectB {
 	public Output getBalanceByMsisdn(String msisdn){	
 		
 		Output output = new Output();
 		
-		int amountDue = getAmountDue(msisdn);
+		Integer amountDue = getAmountDue(msisdn);
+		
+		if(amountDue == null){
+			output.setIsSuccess(false); 
+			output.setErrorCode("004");
+			
+			return output;
+		}
+			
 		int overpaidAmount = getOverpaidAmount(msisdn);
 		
 		int subtractResult = amountDue;
@@ -25,19 +35,17 @@ public class ProjectB {
 	private Integer getOverpaidAmount(String msisdn) {
 		
 		Integer amount = null;
-		switch (msisdn) { 
-		    case "0911111111": 
-		    	amount = 100; 
-		        break; 
-		    case "0912222222": 
-		    	amount = 100;
-		        break; 
-		    case "0913333333": 
-		    	amount = 0; 
-		        break; 
-		    case "0914444444": 
-		    	amount = 0; 
-		        break;
+		if("0911111111".equals(msisdn)){
+			amount = 100; 
+		}
+		if("0912222222".equals(msisdn)){
+			amount = 100; 
+		}
+		if("0913333333".equals(msisdn)){
+			amount = 0; 
+		}
+		if("0914444444".equals(msisdn)){
+			amount = 0; 
 		}
 		
 		return amount;
@@ -46,20 +54,20 @@ public class ProjectB {
 	private Integer getAmountDue(String msisdn) {
 		
 		Integer amount = null;
-			switch (msisdn) { 
-		    case "0911111111": 
-		    	amount = 200; 
-		        break; 
-		    case "0912222222": 
-		    	amount = 50;
-		        break; 
-		    case "0913333333": 
-		    	amount = 200; 
-		        break; 
-		    case "0914444444": 
-		    	amount = 0; 
-		        break;
+		
+		if("0911111111".equals(msisdn)){
+			amount = 200; 
 		}
+		if("0912222222".equals(msisdn)){
+			amount = 50; 
+		}
+		if("0913333333".equals(msisdn)){
+			amount = 200; 
+		}
+		if("0914444444".equals(msisdn)){
+			amount = 0; 
+		}
+		
 		return amount;
 	}
 }

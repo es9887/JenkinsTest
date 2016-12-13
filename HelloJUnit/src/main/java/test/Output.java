@@ -7,6 +7,17 @@ public class Output {
 	private String errorCode;
 	private int balance;
 	
+	public Output(){
+		
+	}
+	
+	public Output(boolean success, int balance, String errorCode, String message){
+		this.success = success;
+		this.balance = balance;
+		this.errorCode = errorCode;
+		this.message = message;
+	}
+	
 	public boolean getIsSuccess() {
 		return success;
 	}
