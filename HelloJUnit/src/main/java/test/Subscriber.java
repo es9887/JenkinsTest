@@ -1,3 +1,4 @@
+package test;
 
 public class Subscriber {
 	public boolean deleteSubscriber(String msisdn) {
@@ -9,10 +10,15 @@ public class Subscriber {
 		// default:
 		// return false;
 		// }
+		// call API1
+
+		// call API2
+
 		if (msisdn == "0911111111") {
-			return false;
+			return true;
 		} else {
 			return false;
 		}
 	}
+
 }

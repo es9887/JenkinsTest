@@ -1,6 +1,9 @@
+package test;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import test.Subscriber;
 
 public class SubscriberTest {
 	Subscriber subscriber = new Subscriber();
