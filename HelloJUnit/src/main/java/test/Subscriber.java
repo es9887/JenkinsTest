@@ -1,6 +1,8 @@
 package test;
 
 public class Subscriber {
+	
+	private String test;
 	public boolean deleteSubscriber(String msisdn) {
 		// switch (msisdn) {
 		// case "09123456789":
@@ -21,7 +23,4 @@ public class Subscriber {
 		}
 	}
 
-	public String insertSubscriber() {
-		return null;
-	}
 }
