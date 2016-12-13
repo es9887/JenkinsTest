@@ -14,7 +14,7 @@ public class Subscriber {
 
 		// call API2
 
-		if (msisdn == "0911111111") {
+		if (msisdn.equals("0911111111")) {
 			return true;
 		} else {
 			return false;
