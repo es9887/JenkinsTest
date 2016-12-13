@@ -2,7 +2,7 @@ package test;
 
 public class Subscriber {
 	
-	private String test;
+	private String Test;
 	public boolean deleteSubscriber(String msisdn) {
 		// switch (msisdn) {
 		// case "09123456789":
