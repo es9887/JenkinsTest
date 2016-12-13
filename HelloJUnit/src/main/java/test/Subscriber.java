@@ -21,4 +21,7 @@ public class Subscriber {
 		}
 	}
 
+	public String insertSubscriber() {
+		return null;
+	}
 }
