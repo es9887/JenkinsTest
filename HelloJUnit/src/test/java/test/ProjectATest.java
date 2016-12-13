@@ -12,15 +12,15 @@ public class ProjectATest {
 	@Mock
 	ProjectB crm = new ProjectB();
 
-	@Test
-	public void getBalanceByMsisdn_external_fail() {
-		// Arrange
-		String msisdn = "0944444444";
-		// ACT
-		Output result = selfcare.getBalanceByMsisdn(msisdn);
-		// Assert
-		assertEquals(100, result.getBalance());
-	}
+//	@Test
+//	public void getBalanceByMsisdn_external_fail() {
+//		// Arrange
+//		String msisdn = "0944444444";
+//		// ACT
+//		Output result = selfcare.getBalanceByMsisdn(msisdn);
+//		// Assert
+//		assertEquals(100, result.getBalance());
+//	}
 
 	@Test
 	public void getBalanceByMsisdn_regular_balance_overpaid() {
